@@ -1,2 +1,2 @@
 # devf26WebB
-introduccion a javascript
+introduccion al modulo de javascript
