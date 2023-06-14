@@ -10,9 +10,19 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <h1>ATM</h1>
+    <form id="select-account">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Seleccione una cuenta</option>
+        <option value="10">Víctor</option>
+        <option value="24">Enrique</option>
+        <option value="11">Rodrigo</option>
+        <option value="16">Leticia</option>
+      </select>
+      <button type="submit" class="btn btn-dark mt-3">Ingresar</button>
+    </form>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

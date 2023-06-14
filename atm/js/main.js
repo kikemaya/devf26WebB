@@ -1,51 +1,36 @@
-// function sum() {
-//   return 4 + 6
-// }
-// console.log(sum())
+const formulario = document.querySelector('#select-account')
 
-function sum(value1, value2) {
-  return value1 + value2;
-}
 
-console.log(sum(8, 3));
-console.log(sum(8, 78));
+const cuenta = [
+  {id: 10, nombre: "Victor", saldo: 900, pin: '0000'}, 
+  {id: 24, nombre: "Enrique", saldo: 990, pin: '1234'}, 
+  {id: 11, nombre: "Rodrigo", saldo: 200, pin: '8976'}
+]
 
-// a + b
-// a - b
-// a * b
-// a / b
-// a % b -> residuo de una división
+formulario.addEventListener('submit', (event)=> {
+  event.preventDefault()
+  let pin = prompt("Ingrese su pin", "");
+  if (pin != null) {
+    if (pin === '0000'){
+      console.log('Correcto')
+    } else {
+      console.log('Incorrecto')
+    }
+  }
+  // console.log(event.target[0].value)
+})
 
-// Tipos de datos
 
-// 'Víctor' -> string
-// 1 -> int
-// 3.1416 -> float
-// true, false -> boolean
-// [1, 2, 3, 4] -> array
-// {name: 'Víctor', age: 37} -> object
-// null -> null
 
-var victor = 18;
-var enrique = 24;
+// [] <- Array 
+// {} <- Object
 
-// console.log(victor - enrique)
 
-function restaEdades(userAge1, userAge2) {
-  var MAYOR_DE_EDAD = 18;
-  var resta = userAge1 - userAge2;
-
-  // if(userAge1 > 18){
-  //   'Es mayor'
-  // } else {
-  //   'No es mayor'
-  // }
-
-  var user1EsMayor = userAge1 >= MAYOR_DE_EDAD ? "Es mayor" : "No es mayor";
-  return {
-    diferencia: resta,
-    es_mayor: user1EsMayor,
-  };
-}
-
-console.log(restaEdades(victor, enrique));
+// Pseudocódigo 
+/*
+1. Seleccionar la cuenta 
+2. Cuando se seleccione una cuenta se solicitará el pin 
+3. Validar el pin ingresado y si el pin proporcionado es incorrecto intentar nuevamente y sí es correcto mostrar menú de opciones
+4. Mostra menú de opciones (consultar, depositar, retirar, salir)
+5. Dependiendo de la opción seleccionada mostrar la pantalla correspondiente
+*/
