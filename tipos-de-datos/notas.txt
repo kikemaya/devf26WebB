@@ -1,0 +1,9 @@
+// TIPOS DE DATOS
+// Int, integer = entero, ..., -2, -1, 0, 1, 2, ...
+// float, punto flotante = ..., 3.0, 3.001, 3.0001, ...
+// char, character = caracter, 2, a, ·, #
+// String, cadenas de caracteres = "hola soy un string"
+// NaN, Not a Number, No es un numero, Es un tipo de dato numerico que indica que se trata de un numero invalido 
+
+// ASI PODEMOS CONSULTAR EL TIPO DE DATO DE UN VALOR
+console.log(typeof nombreCompleto);
