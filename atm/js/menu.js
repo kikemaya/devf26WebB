@@ -12,7 +12,7 @@ const renderMenu = (nombre) => {
         <a class="btn btn-success" href="#" role="button" onClick="consultar()">Consultar</a>
       </div>
       <div class="col">
-        <a class="btn btn-warning" href="#" role="button">Depositar</a>
+        <a class="btn btn-warning" href="#" role="button" onClick="depositar()">Depositar</a>
       </div>
       <div class="col">
         <a class="btn btn-info" href="#" role="button">Retirar</a>
@@ -27,5 +27,11 @@ const renderMenu = (nombre) => {
 };
 
 const consultar = () => {
+  actions.innerHTML = ""
   actions.innerHTML = `<p class="mt-4">Su saldo es $${selected[0].saldo}</p>`
+};
+
+const depositar = () => {
+  actions.innerHTML = ""
+  actions.innerHTML = `<p class="mt-4">Deposito</p>`
 };
