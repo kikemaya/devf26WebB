@@ -1,21 +1,25 @@
 const formulario = document.querySelector("#select-account");
 const select = document.querySelector("select");
 const body = document.querySelector("body");
+const wrapper = document.querySelector("#wrapper");
+let selected = [];
 
 const cuentas = [
-  { id: 10, nombre: "Victor", saldo: 900, pin: "0000" },
-  { id: 24, nombre: "Enrique", saldo: 990, pin: "1234" },
-  { id: 11, nombre: "Rodrigo", saldo: 200, pin: "8976" },
+  { id: 10, nombre: "Victor", saldo: '900.00', pin: "0000" },
+  { id: 24, nombre: "Enrique", saldo: '990.00', pin: "1234" },
+  { id: 11, nombre: "Rodrigo", saldo: '200.00', pin: "8976" },
 ];
 
+// renderMenu()
+
 const validatePIN = (id, pin) => {
-  let selected = cuentas.filter((cuenta) => {
+  selected = cuentas.filter((cuenta) => {
     return cuenta.id === parseInt(id);
   });
   if (selected[0].pin === pin) {
-    alert("Bienvenido");
-    // body.innerHTML= ''
-    location.href = "/opciones/";
+    // alert("Bienvenido");
+    wrapper.innerHTML = "";
+    renderMenu(selected[0].nombre);
   } else {
     alert("Intenta nuevamente");
   }
@@ -38,6 +42,7 @@ cuentas.forEach((cuenta) => {
   option.innerText = cuenta.nombre;
   select.appendChild(option);
 });
+
 
 // [] <- Array
 // {} <- Object
